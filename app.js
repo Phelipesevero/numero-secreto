@@ -32,10 +32,10 @@ function verificarChute(){
         }
         tentativas++;
          limparCampo();
+        
     }
     console.log(chute == numeroSecreto);
 }
-
 function gerarNumeroAleatorio(){
    let numeroEscolhido = parseInt(Math.random() * numeroLimite + 1);
    let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
@@ -46,7 +46,7 @@ function gerarNumeroAleatorio(){
     return gerarNumeroAleatorio();
    } else{
     listaDeNumerosSorteados.push(numeroEscolhido);
-    return numeroEscolhido
+    return numeroEscolhido; 
    }
 }
 
@@ -62,3 +62,4 @@ function reiniciarJogo(){
     exibirMensagemInicial();
     document.getElementById('reiniciar').setAttribute('disabled',true);
 }
+                    
